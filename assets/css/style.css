@@ -1,0 +1,1953 @@
+/* ----------------------------------------------------------------------------------------
+* Author        : 1W Media
+* Template Name : Regain - Clean & Minimal Personal vCard Template
+* Version       : 1.0     
+* ---------------------------------------------------------------------------------------- */ 
+
+
+/* ----------------------------------------------------------------------------------------
+01. Reset css
+
+02. Header area css
+
+03. Banner area css
+
+04. About area css
+
+05. Service area css
+
+06. Skills area css
+
+07. Portfolio area css
+
+08. Testimonial area css
+
+09. Contact area css
+
+10. Map area css
+
+11. Footer area css
+
+12. Blog Listing Page
+
+13. Sidebar Styling
+
+14. 404 Error Page
+
+* -------------------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.html');
+    src: url('../fonts/glyphicons-halflings-regulard41d.html?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular-3.html') format('woff'), url('../fonts/glyphicons-halflings-regular-4.html') format('truetype'), url('../fonts/glyphicons-halflings-regular-5.html#glyphicons-halflingsregular') format('svg');
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 01. Reset css
+* -------------------------------------------------------------------------------------- */
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    color: #000;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-family: 'Josefin Slab', serif;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn.focus:active, 
+.btn:active:focus, 
+.btn:focus {
+    outline: none;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);   
+}
+
+.section {
+    padding: 150px 0px 0px 0px;
+}
+
+.section-title {
+    color: #000;
+    margin-bottom: 67px;
+}
+
+.title-icon{
+  background-color: #fff;
+  border: 2px solid #1e1e1e;
+  border-radius: 26px;  
+  height: 47px;
+  width: 47px;
+  text-align: center;
+  padding-top: 8px;
+  float: left;
+}
+
+.f-icon{
+    font-size: 24px;
+}
+
+
+.section-title h2 {
+    padding-top: 5px;    
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Josefin Slab', serif;
+    padding-left: 70px;
+}
+
+.section-title h4 {
+    font-size: 20px;    
+    color: #505050;
+    padding-top: 16px;
+    padding-left: 70px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-title h3 {
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Titillium Web', 'open sans', sans-serif;
+}
+
+.section-title.white h2 {
+    color: #fff;
+}
+
+.white .left-border {
+    border-left: 3px solid #fff;
+}
+
+#preloader { 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    z-index: 99999; 
+    width: 100%; 
+    height: 100%; 
+    overflow: visible; 
+    background-image: url(../img/preloader.gif);
+    background-position: center center;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #fff;
+
+    display: none !important;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px; 
+
+}
+.table-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.cyan {
+    color: #055353;
+}
+
+.btn-mgn {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.btn {
+    border-radius: 0px !important;
+}
+
+.btn-lg {
+    padding-left: 28px;
+    padding-right: 28px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 14px;
+    color: #fff;
+
+}
+
+.clr{
+    clear: left;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+* 02. Navigation area css
+* -------------------------------------------------------------------------------------- */
+.menu-container{
+    height: 200px;
+    margin-top: 52px;
+}
+
+.menu-container .sticky {
+    z-index: 999;
+    position: relative;
+    background: #fff;
+}
+
+.is-sticky {    
+    z-index: 9999;
+    position: absolute;
+}
+
+.is-sticky .sticky {
+    box-shadow: 0px 0px 2px 0px #aaa;
+    padding-bottom: 0px;
+}
+
+.btn-box{
+    width: 65px;
+    height:75px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 24px 14px 24px 13px;
+    border: 1px #a6a6a6 solid;
+}
+
+.btn-collapse {
+  width: 36px;  
+  position: relative;    
+  margin: 0 auto;
+  margin-top: 3.5%;
+}
+
+.lista-collapse {
+  width: 36px;
+  height: 5px;
+  background-color: #1e1e1e;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.lista-collapse:nth-child(1){top:0;}
+.lista-collapse:nth-child(2){top:37px;}
+.lista-collapse:nth-child(1){top:13px;}
+
+.botao-lista-cima {
+    -ms-transform: rotate(-50deg);
+    -webkit-transform: rotate(-50deg);
+    -moz-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+}
+
+.botao-lista-baixo {
+    -ms-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.lista-collapse.botao-lista-cima {
+top: 25px;
+}
+
+.lista-collapse.botao-lista-baixo {
+top: 25px;
+}
+
+.menu {
+    display: none; 
+    width: 100%;
+    padding: 30px 10px 15px 15px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff; 
+}
+
+.menu ul {
+    margin-bottom: 0;
+    -moz-transition: opacity 0.4s ease-in-out ;
+    -o-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    padding: 15px 0px 15px 0px;
+    border: 1px #a6a6a6 solid;
+    margin-top: 0px;
+}
+
+.menu a {
+    color: red; 
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-family: 'Josefin Slab', serif;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: #000;    
+}
+
+.menu a.active {
+    text-decoration: none;
+    opacity: 1;
+    color:#000;    
+}
+
+.list-inline li {
+    float: none;
+    display: inline-block;
+    color:#505050;
+}
+
+.list-inline .active a{
+    color:#000;
+}
+
+.list-inline li a {
+    color: #505050;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-family: 'Josefin Slab', serif;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+
+.list-inline li a:active,
+.list-inline li a:focus, 
+.list-inline li a:hover
+{
+    text-decoration: none;
+    opacity: 1;
+    color: #000;
+    font-weight: bold;
+}
+
+.list-inline li .active a:active{
+     color: #000;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 03. Banner area css
+* -------------------------------------------------------------------------------------- */
+
+.banner-area {   
+   height:500px;
+   min-height: 500px; 
+   position: absolute;
+   top: 20%; left: 50%;
+   transform: translate(-50%, -50%);  
+}
+
+.circle{
+    width: 250px;
+    height: 250px;
+    background-color: #1e1e1e;  
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 150px;
+    padding: 20px;
+    margin: 0 auto;    
+}
+
+.my-image{
+    width: 213px;
+    height: 213px;    
+}
+
+.caption {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 70px;
+}
+
+.caption h1 {
+    font-size: 60px;
+    color: #fff;
+    margin: 0px;
+    font-weight:bold; 
+    font-family: 'Lato', 'sans-serif';
+}
+
+.caption h2 {
+    color: #fff; 
+    font-size: 30px;
+    font-weight: 200; 
+    font-family: 'Titillium Web', 'sans-serif';
+}
+
+.caption h3 {
+    color: #fff; 
+    font-size: 24px;
+    font-weight: 200; 
+    font-family: 'Josefin Slab', serif;
+    margin-top: 39px;
+    padding: 0px;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  display: none;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;  
+  height: 500px;
+  background-color: #1e1e1e;
+  position: relative;
+  margin-top: 180px;  
+}
+
+.arrow-div{
+    font-size: 24px;
+    color: #fff;
+    padding-top: 80px;   
+    position: absolute;
+    width: 100%;
+}
+
+.arrow-icon{
+    font-size: 24px;
+    color: #fff;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 04. About area css
+* -------------------------------------------------------------------------------------- */
+
+.photo{
+    width: 100%;
+}
+
+.social{  
+       
+    margin: 22px 0px 0px 60px
+}
+
+.social-links {
+    margin: 0px 28px 0px 0px;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.social-links li a i {
+   background-color: #fff;
+   border: 2px solid #1e1e1e;
+   border-radius: 26px;  
+   color: #1e1e1e;
+   font-size: 16px;
+   margin: 0 9px 0px 0px;
+   padding: 6px 0px 0px 0px;
+   width: 36px;
+   height: 36px;
+   text-align: center;        
+}
+
+.social-links li a:hover i {
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+
+.about-text {
+    margin-top: 0px;    
+    padding-bottom: 3px;
+}
+
+.about-text h2 {
+    margin-bottom: 18px;  
+    margin-top: 0;
+    font-size: 33px;
+    font-family: 'Josefin Slab', serif;
+    line-height: 40px;
+}
+
+.about-text h4 {
+    margin-bottom: 20px;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 18px;
+    color: #999;
+    font-weight: 200;
+}
+
+.about-text p {
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;
+    color: #505050;
+    line-height: 30px;
+}
+
+.btn-cv {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 15px;
+    color: #505050;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 16px 60px 16px 60px;
+}
+
+.btn-cv:hover {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 15px;
+    color: #fff;
+    background-color: #1e1e1e;
+    border: 1px solid #1e1e1e;
+    padding: 16px 60px 16px 60px;
+}
+
+/* ---- Personal details with skills ---- */
+
+.personal-row{
+    margin-top: 88px;
+}
+
+.personal{
+    border: 1px solid #999;    
+}
+
+.personal h4{
+    font-family: 'Lato', 'sans-serif';
+    line-height: 40px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+    margin: 0px;
+    border-bottom: 1px solid #999;
+}
+
+.personal ul{
+    padding: 47px 64px 47px 64px
+}
+
+
+.personal ul li{
+    list-style: none;
+    font-size: 16px;
+    font-family: 'Open Sans', 'sans-serif';
+    color: #5c5c5c;
+    padding-bottom: 36px;
+}
+
+
+.personal ul li:last-child{
+    list-style: none;
+    font-size: 16px;
+    font-family: 'Open Sans', 'sans-serif';
+    color: #5c5c5c;
+    padding-bottom: 0px;
+}
+
+.personal ul li h5{
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Open Sans', 'sans-serif';
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+        text-align: left;
+}
+
+/* ----  skills ---- */
+
+.column-padding{
+    margin-left:60px;
+}
+
+.skill-row{
+    width: 100%;
+    margin-bottom: 93px;  
+}
+
+
+.skill-row:last-child{
+    margin-top: 0px;
+}
+
+.skill{
+    width: 100%;   
+}
+
+
+.skill h4{
+    width: 100%; 
+    font-size: 18px;
+    font-family: 'Josefin Slab', serif; 
+    font-weight: 600;    
+    margin: 25px 0px 0px 0px; 
+    text-align: center;
+    color: #000;
+}
+
+.skill-box{
+    border: 1px solid #999;
+    padding: 43px 0px 43px 0px; 
+      
+}
+
+.skill-box:last-child{
+    margin-left: 30px; 
+
+}
+
+.s-icon{
+    font-size: 60px;
+    color: #5c5c5c;
+}
+
+.skill-box h2{
+    font-size: 48px;
+    color: #5c5c5c;
+    font-family: 'Lato', 'sans-serif';       
+}
+
+
+/* ----------------------------------------------------------------------------------------
+* 05. Recent posts area css
+* -------------------------------------------------------------------------------------- */
+
+.blog {
+    float: left;
+    width: 100%;
+}
+
+.blog-img {
+    float: left;    
+    position: relative;
+    display: block;
+    width: 100%
+}
+
+.overlay {
+    background-color: rgba(0,0,0,0.6);   
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;  
+}
+
+.blog-info {
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: 0%;    
+}
+
+.blog-cat{ 
+    padding: 12px 22px 12px 22px;
+    font-size: 16px;
+    color: #505050;
+    font-weight: bold;
+    font-family: 'Josefin Slab', serif;
+    background-color: #fff;
+    margin: 0px;
+    margin-right: 0px;
+}
+
+.blog-cat a{     
+    color: #505050;    
+}
+
+.blog-cat a:hover{     
+    color: #1e1e1e;    
+}
+
+.blog-title  {
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 10%; 
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Lato', 'sans-serif';          
+    font-weight: 300;
+}
+
+.blog-title a  {   
+    color: #fff;    
+}
+
+.blog-title a:hover  {   
+    color: #fff;    
+}
+
+.comment-div{
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 10%;      
+}
+
+.comment-div ul{
+    width: 100%;  
+}
+
+.comment-div li{
+    font-size: 14px;
+    font-family: 'Open Sans', 'sans-serif';
+    color: #fff; 
+    font-style: italic;
+    float: left;
+    list-style: none;
+    padding-right: 5px;
+    letter-spacing: 0.5px;
+}
+
+.comment-div li a{
+    font-size: 14px;
+    font-family: 'Open Sans', 'sans-serif';
+    color: #fff; 
+    font-style: italic;
+    float: left;
+    list-style: none;    
+}
+
+.comment-div li a:hover{
+    color: #a29f9f;     
+}
+
+
+/* ----  owl corousel prev, next ---- */
+
+.owl-nav{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.owl-prev, .owl-next{
+    color: #000;
+    font-size: 36px;
+    margin: 5px;
+    padding: 10px 13px;
+    font-weight: 100;    
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.owl-prev:hover, .owl-next:hover{
+    color:#5c5c5c;    
+}
+
+.btn-rp {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 14px;
+    color: #fff;
+    background-color: #1e1e1e;
+    padding: 16px 60px 16px 60px;
+}
+
+.btn-rp:hover {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 14px;
+    color: #1e1e1e;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 16px 60px 16px 60px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 06. Resume area css
+* -------------------------------------------------------------------------------------- */
+
+.course{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 67px;
+}
+
+.course:last-child{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+}
+
+.nbr{
+    border-left: 1px solid #999;    
+    border-right: 1px solid #999;
+    padding: 20px 20px 20px 20px; 
+    padding: 30px 35px 30px 35px;
+    text-align: center; 
+    float: left;
+    font-weight: bold;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 24px;
+    margin-right: 25px;        
+}
+
+.course-title{    
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    padding: 20px 20px 20px 20px;  
+     
+}
+
+.course-title h4{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 18px;
+    color: #1e1e1e;
+    margin: 0px;
+    padding: 0px; 
+    font-weight: bold;     
+}
+
+.course-title p{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 16px;
+    color: #505050;
+    font-style: italic;
+    margin: 0px;     
+}
+
+.desc{
+    width: 100%;
+    margin-top: 27px;
+}
+
+.desc p{
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;
+    color: #505050;
+    line-height: 30px;
+}
+
+.desc h5{
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;
+    color: #505050;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* ----  experience side ---- */
+
+.experience{
+    border: 1px solid #999;
+    padding: 40px 65px 40px 65px;
+    margin-bottom: 67px;    
+}
+
+.experience:last-child{    
+    margin-bottom: 0px;    
+}
+
+.year{
+    width: 75%;
+    float: left;
+}
+
+.year h3{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 24px;
+    color: #1e1e1e;
+    margin: 0px;
+}
+
+.currently{
+    width: 25%;
+    float: right;
+    text-align: right;    
+}
+
+.currently h5{
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    color: #505050;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0px;    
+}
+
+.company{
+    margin-top: 63px;
+}
+
+.company h3{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 24px;
+    color: #1e1e1e;
+    margin: 0px;
+}
+
+.company p{
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    color: #505050;
+    font-style: italic;
+    margin: 7px 0px 0px 0px;
+    padding: 0px;
+}
+
+.details {
+    margin-top: 26px; 
+      
+}
+
+.details p{    
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    color: #505050;
+    line-height: 27px;       
+}
+
+
+/* ----------------------------------------------------------------------------------------
+* 07. Portfolio area css
+* ---------------------------------------------------------------------------------------*/
+
+.works {    
+    padding-bottom: 0px;
+}
+
+.filters  {
+    margin: 0;
+    padding: 0;   
+}
+
+.filters ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.filters li {
+    display: inline-block;
+    margin: 0px 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 16px;    
+    color: #505050;
+    padding: 8px 14px 8px 14px;
+}
+
+.filters li:hover {
+    color: #fff;
+    background-color: #1e1e1e;
+    padding: 8px 14px 8px 14px;    
+}
+
+.filters li.active {
+    color: #fff;
+    background-color: #1e1e1e;
+    padding: 8px 14px 8px 14px;     
+}
+
+.work-items .item {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-items .item img {
+    width: 100%;
+    width: 100%;
+    transition: 0.8s ease-out;
+}
+
+.work-items .overlay{
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -webkit-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.work-items .item:hover .overlay {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.work-items .item:hover img {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.work-items .overlay i.fa {
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 07. Contact form area css
+* ---------------------------------------------------------------------------------------*/
+
+.form-control {
+    display: block;
+    border: 0px;
+    width: 100%;
+    height: 54px;
+    padding: 20px 19px; 
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #6a6868;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 0px;
+    border: 1px solid #505050;
+    box-shadow: none;
+    margin-bottom: 26px;
+}
+
+.form-control:focus {
+    border-color: #000;
+    outline: 0;
+    box-shadow: none;
+}
+
+.contact-form .form-group {
+    position: relative;
+    border: 1px solid #bbb;
+    padding-left: 10px;
+    margin-bottom: 26px;
+}
+
+.contact-form .form-group:before {
+    position: absolute;
+    height: 45px;
+    font-family: FontAwesome;
+    top: 0;
+    left: 0;
+    width: 20px;
+    text-align: center;
+    line-height: 45px;
+    color: #ffc600;
+    font-size: 18px;
+}
+
+textarea.form-control {
+    height: 140px;
+}
+
+.contact-form #message {
+    padding-top: 10px;
+    height: 140px;
+}
+
+.actions{
+    text-align: center;
+    width: 100%;
+}
+
+.success {
+    background: #fff none repeat scroll 0 0;
+    color: #50B948;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+.error {
+    background: #fff none repeat scroll 0 0;
+    color: #ff0000;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-contact {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 14px;
+    color: #fff;
+    background-color: #1e1e1e;
+    padding: 16px 60px 16px 60px;
+}
+
+.btn-contact:hover {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Open Sans', 'sans-serif';
+    margin-top: 14px;
+    color: #1e1e1e;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 16px 60px 16px 60px;
+}
+
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #1e1e1e;
+  background-color: #fff; 
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #872525;
+  background-color: #fff;  
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 10. Map area css
+* --------------------------------------------------------------------------------------- */
+
+
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 481px;
+        margin-top: 150px;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+
+/* ----------------------------------------------------------------------------------------
+* 11. Footer area css
+* --------------------------------------------------------------------------------------- */
+
+.footer-area {      
+    text-align: center;
+    padding: 150px 0px 55px 0px;
+}
+
+
+.footer-text p {
+    margin-top: 50px;
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    color: #505050;
+}
+
+.footer-text p a {   
+    color: #505050;
+}
+
+.footer-text p a:hover {   
+    color: #1e1e1e;
+    font-weight: bold;
+}
+
+.footer-social-links {
+    margin-top: 0px;
+}
+
+.footer-social-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer-social-links li a i {
+   background-color: #fff;
+   border: 2px solid #1e1e1e;
+   border-radius: 26px;  
+   color: #1e1e1e;
+   font-size: 16px;
+   margin: 0 18px 0px 0px;
+   padding: 12px 0px 0px 0px;
+   width: 48px;
+   height: 48px;
+        
+}
+
+.footer-social-links li a:hover i {
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 12. Blog Listing Page
+* -------------------------------------------------------------------------------------- */
+
+.page-title-bar{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 37px;
+   
+}
+
+.page-title-bar h2{
+    font-family: 'Josefin Slab', serif;
+    font-size: 40px;
+    color: #1e1e1e;
+    font-weight: 300;
+    text-align: center;
+}
+
+.blog-page-content{
+    margin-top: 150px;
+}
+
+.blog-page-post{
+    margin-bottom: 150px;
+}
+
+.post-info{
+    padding: 67px 0;
+    text-align: center;
+}
+
+.post-info h4{  
+    font-family:'Lato', 'sans-serif';
+    font-size: 14px;    
+    color: #737373;
+    padding: 0px 10px 9px 10px;
+    border-bottom: 1px solid #737373;
+    text-align: center;
+    display: inline-block;    
+}
+
+.post-info h3{  
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;    
+    color: #1e1e1e;  
+    text-align: center;    
+    margin: 25px 0px 0px;
+    font-weight: 400;
+}
+
+.post-info ul{
+    margin-top: 15px;
+    list-style: none;
+}
+
+.post-info ul li{   
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    color: #737373;
+    display: inline-block;
+    font-style: italic;
+}
+
+.post-info ul li a{ 
+    color: #737373;   
+}
+
+.post-info ul li a:hover{ 
+    color: #1e1e1e;   
+}
+
+.post-content{
+    margin: 0px;
+}
+
+.post-content p{   
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;
+    color: #737373;
+    line-height: 30px;
+}
+
+.continue{
+    margin-top: 67px;    
+}
+
+.continue a{    
+    color: #1e1e1e;
+    padding: 0px 10px 9px 10px;
+    border-bottom: 1px solid #737373;
+    text-align: center;    
+}
+
+.continue a:hover{    
+    color: #737373;
+    padding: 0px 10px 9px 10px;
+    border-bottom: 1px solid #737373;
+    text-align: center;    
+}
+
+.post-additional-info{
+    border-top: 1px solid #c6c6c6;
+    margin-top: 67px;
+    text-align: center;
+}
+
+.blog-video{
+    width: 100%;
+    height: 461px;
+}
+
+.comments{
+    float: left; 
+    padding-top: 30px;   
+}
+
+.comments a{
+    color: #737373;
+    font-family: 'Open Sans', 'sans-serif';
+    font-style: italic;
+}
+
+.comments a:hover{
+    color: #1e1e1e;
+    text-decoration: underline;    
+}
+
+.share{
+    float: right;
+    padding: 30px 100px 0px 0px;  
+}
+
+.share ul{
+    width: 100%;
+}
+
+.share ul li{
+    list-style: none;
+    float: left;
+    padding-left: 15px;
+}
+
+.share ul li:first-child{
+    color: #737373;
+    font-style: italic;
+}
+
+
+.share ul li a{
+    list-style: none;
+    color: #1e1e1e;
+}
+
+.share ul li a:hover{
+    color: #737373;
+}
+
+
+/* Post with slider */
+
+
+.slide-control.right{left:auto;right:30px;}
+
+.slide-control {
+    color: #1e1e1e;
+    font-size: 46px;
+    left: 30px;
+    margin-top: -70px;
+    position: absolute;
+    top: 50%;
+    margin: 20% 40% 30% 40%
+}
+
+.carousel-indicators {    
+    display: none;
+}
+
+
+/* Post Single Styling */
+
+blockquote {
+    margin: 44px 0;
+    border-left: 2px solid #dcdcdc;
+    color: #929292;
+    font-size: 16px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.single-tags{
+    margin-top: 67px;
+}
+
+
+.single-tag-cloud{
+    margin-top: 24px;
+}
+
+.single-tag-cloud li{
+    display: inline-block; 
+    
+}
+
+.single-tag-cloud li a{
+    display: inline-block;
+    font-family:'Lato', 'sans-serif';
+    font-size: 12px;    
+    color: #737373;
+    text-transform:uppercase;
+    padding: 8px 20px 8px 20px;
+}
+
+.single-tag-cloud li a:hover{
+    display: inline-block;
+    background-color:#737373;    
+    color: #fff;
+    text-transform:uppercase;
+
+}
+
+.single-tag-cloud li a .active{
+    display: inline-block;
+    font-family:'Lato', 'sans-serif';
+    font-size: 12px;    
+    color: #737373;
+    text-transform:uppercase;
+    padding: 8px 20px 8px 20px;
+}
+
+
+/* Comments area */
+
+.mycomments{
+    margin-top: 150px;    
+}
+
+.mycomments h3{
+    margin-top: 150px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;    
+    color: #1e1e1e;
+    font-weight: bold; 
+}
+
+.mycomments p{
+    margin-top: 37px;
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;    
+    color: #5c5c5c;
+    line-height: 30px; 
+}
+
+.mycomments ul{
+    margin-top: 67px;
+}
+
+.mycomments ul li{    
+    list-style: none;
+    border-bottom: 1px #929292 solid;
+    padding-bottom: 24px;
+}
+
+.comment-head {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.comment-head img {
+    width: 65px;
+    height: 66px;
+}
+
+.comment-head div {
+    position: absolute;
+    top: 10%;
+    left: 90px;
+}
+
+.comment-head div h4 {
+    margin-bottom: 5px;
+    font-family:'Lato', 'sans-serif';
+    font-size: 18px;    
+    color: #1e1e1e;
+}
+
+.comment-head div span {
+    color: #a0a0a0;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.comment-head a {
+    float: right;
+    color: #929292;
+    margin-top: 15px;
+    font-family:'Lato', 'sans-serif';
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.comment-head a:hover {    
+    color: #1e1e1e;    
+}
+
+
+.mycomments ul li.comment-reply {
+    padding-left: 50px;
+    margin-top: 30px;
+}
+
+.mycomments ul li:last-child{    
+    margin-top: 30px;
+}
+
+
+/* Comments form */
+
+.write-comment{
+    margin-top: 150px;
+
+}
+
+.write-comment h3{   
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;    
+    color: #1e1e1e;
+    font-weight: bold; 
+}
+
+.write-comment p{   
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;    
+    color: #505050; 
+    margin-top: 20px;    
+}
+
+.forms{
+    margin-top: 67px;
+}
+
+.input-area{
+    float: left;
+    width: 48%;
+}
+
+.input-area2{
+    float: left;
+    width: 48%;
+    margin-left:4%;
+}
+
+
+.input-field{
+    border: 1px #d5d2d2 solid;
+    padding: 18px 18px 18px 28px;
+    width: 100%;
+}
+
+.msg-text {
+    margin-top: 20px;
+    clear: left;
+}
+
+.msg-area{
+    border: 1px #d5d2d2 solid;
+    padding: 18px 18px 10px 28px;
+    width: 100%;
+    height: 200px;
+}
+
+.write-comment .submit-style {
+    margin-top: 30px;
+    background-color: #1e1e1e;
+    padding: 17px 54px 17px 54px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.submit-style:hover {
+    background: #323232;
+    color: #fff;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: #1e1e1e;  
+  outline: 0 none;
+}
+
+.input-field:focus,.input-field:hover{
+  border-color: #d5d2d2; 
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 13. Sidebar Styling
+* -------------------------------------------------------------------------------------- */
+.my-sidebar{
+    width: auto;
+}
+
+.blog-sidebar{
+    padding-left: 60px;
+}
+
+.sidebar-box{    
+    margin-bottom: 96px;    
+}
+
+.sidebar-box h4{
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;    
+    color: #1e1e1e;
+    font-weight: bold;
+    margin: 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1e1e1e; 
+}
+
+
+/* Categories styling */
+
+.categories{
+    margin: 33px 0px 67px 0px;   
+}
+
+.categories li{    
+    list-style: none;
+}
+
+.categories li a{
+    font-family:'Lato', 'sans-serif';
+    font-size: 16px;      
+    color: #1e1e1e;
+    line-height: 40px;
+}
+
+.categories li a:hover{      
+    color: #737373;
+    
+}
+
+
+/*Recent posts styling */
+
+.recent-posts{
+    margin: 33px 0px 67px 0px;  
+}
+
+.post-box{
+    margin-bottom: 32px;
+}
+
+.post-details{
+    padding: 10px 0px 20px 10px;
+    display: inline-block;
+    margin: 0px;
+}
+
+.post-details h5{
+    color: #1e1e1e;
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 16px;
+}
+
+.post-details h5 a{
+    color: #1e1e1e;    
+}
+
+.post-details h5 a:hover{
+    color: #737373;    
+}
+
+.post-details p{
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    font-style: italic;
+}
+
+.post-details p a{
+    color: #737373;
+    cursor: pointer;
+}
+
+.post-details p a:hover{
+    color: #1e1e1e; 
+}
+
+
+/*Tag cloud styling */
+
+.tag-cloud{
+    margin-top: 24px;
+}
+
+.tag-cloud li{
+    display: inline-block; 
+    
+}
+
+.tag-cloud li a{
+    display: inline-block;
+    font-family:'Lato', 'sans-serif';
+    font-size: 12px;    
+    color: #737373;
+    text-transform:uppercase;
+    padding: 8px 20px 8px 20px;
+}
+
+.tag-cloud li a:hover{
+    display: inline-block;
+    background-color:#737373;    
+    color: #fff;
+    text-transform:uppercase;
+
+}
+
+
+/*Follow me on styling */
+
+
+
+.sbar-social{            
+    margin: 32px 0px 0px 0px
+}
+
+.sbar-social-links {
+    margin: 0px 28px 0px 0px;
+}
+
+.sbar-social-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.sbar-social-links li a i {
+   background-color: #fff;
+   border: 2px solid #999999;
+   border-radius: 26px;  
+   color: #626060;
+   font-size: 16px;
+   margin: 0 9px 0px 0px;
+   padding: 7px 0px 0px 0px;
+   width: 36px;
+   height: 36px;
+   text-align: center;
+        
+}
+
+.sbar-social-links li a:hover i {
+    color: #fff;
+    background-color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+* 14. 404 Error Page
+* -------------------------------------------------------------------------------------- */
+
+.content-area{
+    margin-top: 0px;
+}
+
+.content-area h1{
+    font-family: 'Josefin Slab', serif;
+    font-size: 150px;  
+    color:#929292;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+}
+
+.content-area h3{
+    font-family:'Lato', 'sans-serif';
+    font-size: 30px;  
+    color:#1e1e1e;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 37px;
+}
+
+.content-area p{
+    font-family:'Lato', 'sans-serif';
+    font-size: 16px;  
+    color:#1e1e1e;    
+    text-align: center;
+    margin-top: 37px;
+}
+
+.go-home{
+    margin-top: 33px;
+    text-align: center;
+}
+
+.go-home-btn{
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #929292;
+    padding: 17px 54px 17px 54px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 16px; 
+    color: #929292; 
+}
+
+.go-home-btn:hover{    
+    background-color: #1e1e1e; 
+    color: #fff;
+ 
+}
+
